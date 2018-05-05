@@ -1,0 +1,6 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Target Name="RunEmbeddinator" AfterTargets="AfterBuild" Inputs="$(OutputPath)/$(AssemblyName).dll" Outputs="$(IntermediateOutputPath)/Embeddinator/$(AssemblyName).framework/$(AssemblyName)">
+		<Exec Command="$(SolutionDir)/packages/Embeddinator-4000.0.4.0/tools/objcgen $(OutputPath)/$(AssemblyName).dll --target=framework --platform=macOS-modern --abi=x86_64 --nativeexception --compile --debug --outdir=$(OutputPath)" />
+		<Exec Command="MONO_PATH=/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/Xamarin.Mac/ /Library/Frameworks/Xamarin.Mac.framework/Versions/Current/bin/bmac-mobile-mono --aot --runtime=mobile $(OutputPath)/$(AssemblyName).framework/Versions/A/MonoBundle/$(AssemblyName).dll" />
+	</Target>
+</Project>
