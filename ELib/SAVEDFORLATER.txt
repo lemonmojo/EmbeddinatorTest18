@@ -1,0 +1,1 @@
+﻿<Exec Command="MONO_PATH=/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/Xamarin.Mac/ /Library/Frameworks/Xamarin.Mac.framework/Versions/Current/bin/bmac-mobile-mono --aot --runtime=mobile $(OutputPath)/$(AssemblyName).framework/Versions/A/MonoBundle/$(AssemblyName).dll" />

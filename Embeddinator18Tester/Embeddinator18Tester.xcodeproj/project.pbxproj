@@ -93,6 +93,7 @@
 				E7F5566E20985F76004421CB /* Frameworks */,
 				E7F5566F20985F76004421CB /* Resources */,
 				E7F5568920985F8B004421CB /* Embed Frameworks */,
+				E7F1103E20A35B3300582775 /* AOT */,
 			);
 			buildRules = (
 			);
@@ -146,6 +147,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E7F1103E20A35B3300582775 /* AOT */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = AOT;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "MONO_PATH=/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/Xamarin.Mac/ /Library/Frameworks/Xamarin.Mac.framework/Versions/Current/bin/bmac-mobile-mono --aot --runtime=mobile ${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Contents/Frameworks/ELib.framework/Versions/Current/MonoBundle/ELib.dll";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E7F5566D20985F76004421CB /* Sources */ = {
