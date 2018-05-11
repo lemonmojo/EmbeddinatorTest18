@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Person.cs" />
+    <Compile Include="EventTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

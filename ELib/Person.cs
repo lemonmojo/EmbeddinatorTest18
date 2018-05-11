@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace ELib
-{
+{   
     public class Person
     {
 		public string FirstName { get; set; } = string.Empty;
@@ -12,7 +12,7 @@ namespace ELib
 			get {
 				return FirstName + " " + LastName;               
 			}
-		}
+		}      
 
         public Person() { }
 
@@ -46,6 +46,6 @@ namespace ELib
         public void Print(string str)
         {
             Console.WriteLine(str);
-        }
+        }      
     }
 }
