@@ -161,7 +161,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "MONO_PATH=/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/Xamarin.Mac/ /Library/Frameworks/Xamarin.Mac.framework/Versions/Current/bin/bmac-mobile-mono --aot --runtime=mobile ${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Contents/Frameworks/ELib.framework/Versions/Current/MonoBundle/ELib.dll";
+			shellScript = "MONO_PATH=${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Contents/Frameworks/ELib.framework/Versions/Current/MonoBundle/ /Library/Frameworks/Xamarin.Mac.framework/Versions/Current/bin/bmac-mobile-mono --aot --runtime=mobile ${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Contents/Frameworks/ELib.framework/Versions/Current/MonoBundle/ELib.dll\nMONO_PATH=${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Contents/Frameworks/ELib.framework/Versions/Current/MonoBundle/ /Library/Frameworks/Xamarin.Mac.framework/Versions/Current/bin/bmac-mobile-mono --aot --runtime=mobile ${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Contents/Frameworks/ELib.framework/Versions/Current/MonoBundle/mscorlib.dll\nMONO_PATH=${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Contents/Frameworks/ELib.framework/Versions/Current/MonoBundle/ /Library/Frameworks/Xamarin.Mac.framework/Versions/Current/bin/bmac-mobile-mono --aot --runtime=mobile ${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Contents/Frameworks/ELib.framework/Versions/Current/MonoBundle/System.dll";
 		};
 /* End PBXShellScriptBuildPhase section */
 

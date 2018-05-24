@@ -10,7 +10,7 @@ namespace ELib
         public string FullName
 		{
 			get {
-				return FirstName + " " + LastName;               
+				return FirstName + " " + LastName;
 			}
 		}      
 
