@@ -12,7 +12,9 @@ namespace ELib
 			get {
 				return FirstName + " " + LastName;
 			}
-		}      
+		}
+
+		public int Age { get; set; }
 
         public Person() { }
 

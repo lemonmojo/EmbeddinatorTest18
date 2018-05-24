@@ -19,6 +19,7 @@
 - (ELib_Person*)johnDoe
 {
     ELib_Person* person = [[ELib_Person alloc] initWithFirstName:@"John" lastName:@"Doe"];
+    person.age = 31;
     
     return person;
 }
