@@ -64,7 +64,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "MONO_LOG_LEVEL"
-            value = "debug"
+            value = "warning"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

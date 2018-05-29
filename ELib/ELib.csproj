@@ -53,7 +53,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Person.cs" />
-    <Compile Include="EventTest.cs" />
+    <Compile Include="EventTest_E4kIssue.cs" />
+    <Compile Include="NativeEventsTest.cs" />
+    <Compile Include="NativeEvent.cs" />
+    <Compile Include="NativeEventArgs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
