@@ -2,7 +2,7 @@
 
 namespace ELib
 {   
-    public class Person
+	public class Person : Human
     {
 		public string FirstName { get; set; } = string.Empty;
 		public string LastName { get; set; } = string.Empty;

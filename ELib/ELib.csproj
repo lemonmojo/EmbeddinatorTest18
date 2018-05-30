@@ -53,15 +53,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Person.cs" />
-    <Compile Include="EventTest_E4kIssue.cs" />
-    <Compile Include="NativeEventsTest.cs" />
-    <Compile Include="NativeEvent.cs" />
-    <Compile Include="NativeEventArgs.cs" />
+    <Compile Include="Events\EventTest_E4kIssue.cs" />
+    <Compile Include="Events\NativeEvent.cs" />
+    <Compile Include="Events\NativeEventsTest.cs" />
+    <Compile Include="Utils\ReferenceCountedObject.cs" />
+    <Compile Include="Human.cs" />
+    <Compile Include="Lifeform.cs" />
+    <Compile Include="Events\NativeEventArgs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Embeddinator-4000.targets" />
     <None Include="SAVEDFORLATER.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Events\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
   <Import Project="Embeddinator-4000.targets" />

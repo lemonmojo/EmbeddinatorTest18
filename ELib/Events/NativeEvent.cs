@@ -8,14 +8,14 @@ namespace ELib
     {
 		public const string KEY_EVENTARGS = "EventArgs";
 
-		public static void Invoke(string notificationName, NativeEventArgs eventArgs)
+		public static void Invoke(string notificationName, ReferenceCountedObject eventArgs)
         {
             NSNotification notification = CreateNotification(notificationName, eventArgs);
 
             NSNotificationCenter.DefaultCenter.PostNotification(notification);
         }
 
-		private static NSNotification CreateNotification(string notificationName, NativeEventArgs eventArgs)
+		private static NSNotification CreateNotification(string notificationName, ReferenceCountedObject eventArgs)
         {
 			long eventArgsPtr = eventArgs != null ? eventArgs.NativeHandle : 0;
 

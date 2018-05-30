@@ -9,6 +9,7 @@
 
 @implementation AppDelegate {
     BOOL m_eventObserverRegistered;
+    __strong ELib_MessageReceivedEventArgs *m_eventArgs;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -55,11 +56,13 @@
 {
     [self registerEventObservers];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        ELib_NativeEventsTest* eventTest = [[ELib_NativeEventsTest alloc] init];
-        
-        [eventTest raiseMessageReceived];
-    });
+    NSLog(@"Previous event args message: %@", self.eventArgs.message);
+    
+    self.eventArgs = nil;
+    
+    ELib_NativeEventsTest* eventTest = [[ELib_NativeEventsTest alloc] init];
+    
+    [eventTest raiseMessageReceived];
 }
 
 - (void)registerEventObservers
@@ -85,7 +88,23 @@
     
     eventArgs.message = @"Message was set in native code";
     
-    [eventArgs dispose];
+    [self setEventArgs:eventArgs];
+}
+
+- (ELib_MessageReceivedEventArgs*)eventArgs
+{
+    return m_eventArgs;
+}
+
+- (void)setEventArgs:(ELib_MessageReceivedEventArgs*)eventArgs
+{
+    if (m_eventArgs) {
+        [m_eventArgs dispose]; m_eventArgs = nil;
+    }
+    
+    [eventArgs managedRetain];
+    
+    m_eventArgs = eventArgs;
 }
 
 @end
