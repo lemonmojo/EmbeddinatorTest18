@@ -2,7 +2,7 @@
 
 namespace ELib
 {   
-	public class MessageReceivedEventArgs : ReferenceCountedObject
+	public class MessageReceivedEventArgs : NativeEventArgs
 	{
 		public string Message { get; set; }
 
